@@ -103,8 +103,8 @@ The goal of this project is to verify the core functionalities of the applicatio
 Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/salaarhamza/saucedemo-test-automation.git
+cd saucedemo-test-automation
 ```
 
 Create a virtual environment:
