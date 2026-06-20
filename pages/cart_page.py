@@ -20,3 +20,6 @@ class CartPage:
 
     def is_cart_empty(self):
         return self.page.locator(self.cart_item).count() == 0
+
+    def proceed_to_checkout(self):
+        self.page.click("[data-test='checkout']")
