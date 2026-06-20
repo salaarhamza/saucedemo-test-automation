@@ -38,3 +38,17 @@ class InventoryPage:
 
     def sort_by_price_high_to_low(self):
         self.page.select_option(self.sort_dropdown, "hilo")
+        
+    
+    #### Cart interactions ####
+    def add_backpack_to_cart(self):
+        self.page.click("[data-test='add-to-cart-sauce-labs-backpack']")
+
+    def remove_backpack_from_cart(self):
+        self.page.click("[data-test='remove-sauce-labs-backpack']")
+
+    def open_cart(self):
+        self.page.click(".shopping_cart_link")
+
+    def get_cart_badge_count(self):
+        return self.page.locator(".shopping_cart_badge").inner_text()
