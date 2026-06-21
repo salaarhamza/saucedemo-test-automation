@@ -36,6 +36,7 @@ The goal of this project is to verify the core functionalities of the applicatio
 
 ```text
 .
+├── reports/
 ├── pages/
 │   ├── login_page.py
 │   ├── inventory_page.py
