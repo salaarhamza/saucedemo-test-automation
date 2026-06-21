@@ -7,7 +7,7 @@ __pycache__/
 
 # Playwright reports
 playwright-report/
-reports/
+#reports/
 
 # Pytest cache
 .pytest_cache/
