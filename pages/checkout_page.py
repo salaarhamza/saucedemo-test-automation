@@ -33,3 +33,24 @@ class CheckoutPage:
 
     def get_complete_message(self):
         return self.page.locator(self.complete_header).inner_text()
+
+    def cancel_checkout(self):
+        self.page.click("[data-test='cancel']")
+
+    def get_overview_item_names(self):
+        return self.page.locator(".inventory_item_name").all_inner_texts()
+
+    def get_item_total(self):
+        text = self.page.locator(".summary_subtotal_label").inner_text()
+        return float(text.replace("Item total: $", ""))
+
+    def get_tax(self):
+        text = self.page.locator(".summary_tax_label").inner_text()
+        return float(text.replace("Tax: $", ""))
+
+    def get_total(self):
+        text = self.page.locator(".summary_total_label").inner_text()
+        return float(text.replace("Total: $", ""))
+
+    def back_home(self):
+        self.page.click("[data-test='back-to-products']")
